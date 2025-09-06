@@ -57,14 +57,14 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: flask_task_1-revision1.json
-          container-name: flask_container_1
+          task-definition: july-loan-task-revision1.json
+          container-name: loan-app-container
           image: ${{ steps.build-image.outputs.image }}
 
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: flask_task_1-service
-          cluster: loan-app-cluster
+          service: july-loan-task-service
+          cluster: july-loan-cluster
           wait-for-service-stability: true
