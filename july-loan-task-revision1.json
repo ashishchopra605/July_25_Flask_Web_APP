@@ -9,7 +9,7 @@
             "environment": [],
             "environmentFiles": [],
             "essential": true,
-            "image": "577397739301.dkr.ecr.us-east-1.amazonaws.com/july_25_flask_loan:latest",
+            "image": "273354629119.dkr.ecr.us-east-1.amazonaws.com/july25_flask_loan:latest",
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -38,13 +38,13 @@
     ],
     "cpu": "1024",
     "enableFaultInjection": false,
-    "executionRoleArn": "arn:aws:iam::577397739301:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::273354629119:role/ecsTaskExecutionRole",
     "family": "july-loan-task",
     "memory": "3072",
     "networkMode": "awsvpc",
     "placementConstraints": [],
-    "registeredAt": "2025-09-06T15:04:53.800Z",
-    "registeredBy": "arn:aws:iam::577397739301:user/devops_user_1555471_69843",
+    "registeredAt": "2025-09-07T05:13:50.624Z",
+    "registeredBy": "arn:aws:iam::273354629119:user/devops_user_1555471_70000",
     "requiresAttributes": [
         {
             "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
@@ -80,7 +80,7 @@
         "operatingSystemFamily": "LINUX"
     },
     "status": "ACTIVE",
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:577397739301:task-definition/july-loan-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:273354629119:task-definition/july-loan-task:1",
     "volumes": [],
     "tags": []
 }
