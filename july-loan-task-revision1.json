@@ -1,86 +1,86 @@
 {
-  "compatibilities": [
-    "EC2",
-    "FARGATE"
-  ],
-  "containerDefinitions": [
-    {
-      "cpu": 0,
-      "environment": [],
-      "environmentFiles": [],
-      "essential": true,
-      "image": "719830632958.dkr.ecr.us-east-1.amazonaws.com/july25_flask_loan:latest",
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/july-loan-task",
-          "awslogs-create-group": "true",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        },
-        "secretOptions": []
-      },
-      "mountPoints": [],
-      "name": "loan-app-container",
-      "portMappings": [
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "containerDefinitions": [
         {
-          "appProtocol": "http",
-          "containerPort": 80,
-          "hostPort": 80,
-          "name": "loan-app-container-80-tcp",
-          "protocol": "tcp"
+            "cpu": 0,
+            "environment": [],
+            "environmentFiles": [],
+            "essential": true,
+            "image": "719830632958.dkr.ecr.us-east-1.amazonaws.com/july25_flask_loan:latest",
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/july-loan-task",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "mountPoints": [],
+            "name": "loan-app-container",
+            "portMappings": [
+                {
+                    "appProtocol": "http",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "name": "loan-app-container-80-tcp",
+                    "protocol": "tcp"
+                }
+            ],
+            "systemControls": [],
+            "ulimits": [],
+            "volumesFrom": []
         }
-      ],
-      "systemControls": [],
-      "ulimits": [],
-      "volumesFrom": []
-    }
-  ],
-  "cpu": "1024",
-  "enableFaultInjection": false,
-  "executionRoleArn": "arn:aws:iam::719830632958:role/ecsTaskExecutionRole",
-  "family": "july-loan-task",
-  "memory": "3072",
-  "networkMode": "awsvpc",
-  "placementConstraints": [],
-  "registeredAt": "2025-09-13T06:07:17.453Z",
-  "registeredBy": "arn:aws:iam::719830632958:user/devops_user_1555471_72339",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    ],
+    "cpu": "1024",
+    "enableFaultInjection": false,
+    "executionRoleArn": "arn:aws:iam::719830632958:role/ecsTaskExecutionRole",
+    "family": "july-loan-task",
+    "memory": "3072",
+    "networkMode": "awsvpc",
+    "placementConstraints": [],
+    "registeredAt": "2025-09-13T07:01:12.606Z",
+    "registeredBy": "arn:aws:iam::719830632958:user/devops_user_1555471_72339",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "revision": 5,
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
     },
-    {
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-    }
-  ],
-  "requiresCompatibilities": [
-    "FARGATE"
-  ],
-  "revision": 1,
-  "runtimePlatform": {
-    "cpuArchitecture": "X86_64",
-    "operatingSystemFamily": "LINUX"
-  },
-  "status": "ACTIVE",
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:719830632958:task-definition/july-loan-task:1",
-  "volumes": [],
-  "tags": []
+    "status": "ACTIVE",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:719830632958:task-definition/july-loan-task:5",
+    "volumes": [],
+    "tags": []
 }
